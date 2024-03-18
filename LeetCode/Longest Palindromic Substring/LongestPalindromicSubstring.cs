@@ -1,39 +1,54 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Longest_Palindromic_Substring
+﻿namespace Longest_Palindromic_Substring
 {
     public static class LongestPalindromicSubstring
     {
         public static string Solve(string input)
         {
-            var result = string.Empty;
-            for (var i = 1; i < input.Length - 1; i++)
+            var (resultLeft, resultRight) = (0, 0);
+
+            for (var i = 0; i < input.Length - 1 && input.Length - i > resultRight - resultLeft; i++)
             {
-                var subResult = string.Empty;
+                var (left, right) = FindLongestPalindromFromLeft(i, input.Length - 1, input);
 
-                for (var j = 1; j < input.Length - 2; j++)
+                if (left != -1 && right != -1 && right - left > resultRight - resultLeft)
                 {
-                    if (i - j < 0 || i + j > input.Length - 1) { break; }
-
-                    if (input[i - j] == input[i + j])
-                    {
-                        subResult = input.Substring(i - j, j * 2 + 1);
-                    }
+                    resultLeft = left;
+                    resultRight = right;
                 }
-
-                if (subResult.Length > result.Length)
-                {
-                    result = subResult;
-                }
-
             }
 
 
-            return result;
+            return input.Substring(resultLeft, resultRight - resultLeft + 1);
+        }
+
+        private static (int, int) FindLongestPalindromFromLeft(int left, int right, string input)
+        {
+
+            for (var j = right; j > left; j--)
+            {
+                if (CheckIfPalindrome(left, j, input))
+                {
+                    return (left, j);
+                }
+            }
+
+            return (-1, -1);
+        }
+
+        private static bool CheckIfPalindrome(int left, int right, string input)
+        {
+            while (left < right)
+            {
+                if (input[left] != input[right])
+                {
+                    return false;
+                }
+
+                left++;
+                right--;
+            }
+
+            return true;
         }
 
     }

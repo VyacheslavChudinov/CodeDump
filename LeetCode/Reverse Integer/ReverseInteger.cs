@@ -1,33 +1,58 @@
-﻿namespace Reverse_Integer
+﻿using System.Text;
+
+namespace Reverse_Integer
 {
     public static class ReverseInteger
     {
-        public static string Limit = "2147483647"; // 7463847412
-        public static bool Solve(int value)
+        public static string PositiveLimit = "2147483647";
+        public static string NegativeLimit = "2147483648";
+        public static int Solve(int value)
         {
 
-            return CheckIfExceedsLimit(value);
+            var isNegative = value < 0;
 
+            var valueAsString = isNegative ? (-value).ToString() : value.ToString();
+            var isTooBigInReverse = CheckIfExceedsLimit(valueAsString, isNegative);
+
+
+            if (isTooBigInReverse) { return 0; }
+            var result = Reverse(valueAsString);
+
+            return isNegative ? -result : result;
         }
 
-        public static bool CheckIfExceedsLimit(int value)
+        public static int Reverse(string value)
         {
-            var valueAsString = value.ToString();
+            var result = new StringBuilder();
+            for (int i = value.Length - 1; i >= 0; i--)
+            {
+                result.Append(value[i]);
+            }
 
-            if (valueAsString.Length > Limit.Length)
+            return int.Parse(result.ToString());
+        }
+        public static bool CheckIfExceedsLimit(string value, bool isNegative)
+        {
+            var limit = isNegative ? NegativeLimit : PositiveLimit;
+
+            if (value.Length > limit.Length)
             {
                 return true;
             }
 
-            if (valueAsString.Length == Limit.Length)
+            if (value.Length == limit.Length)
             {
-                for (int i = 0; i < valueAsString.Length; i++)
+                var i = 0;
+                while (i < value.Length && limit[i] == value[value.Length - i - 1])
                 {
-                    if (Limit[i] < valueAsString[valueAsString.Length - i - 1])
-                    {
-                        return true;
-                    }
+                    i++;
                 }
+
+                if (limit[i] < value[value.Length - i - 1])
+                {
+                    return true;
+                }
+
                 return false;
             }
 

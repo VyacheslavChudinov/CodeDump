@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Longest Palindromic Substring\Longest Palindromic Substring.csproj" />
+    <ProjectReference Include="..\Reverse Integer\Reverse Integer.csproj" />
   </ItemGroup>
 
   <ItemGroup>

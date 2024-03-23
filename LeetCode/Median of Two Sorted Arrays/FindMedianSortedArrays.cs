@@ -1,6 +1,6 @@
 ﻿namespace Median_of_Two_Sorted_Arrays
 {
-    internal static class FindMedianSortedArrays
+    public static class FindMedianSortedArrays
     {
         public static double Solve(int[] nums1, int[] nums2)
         {

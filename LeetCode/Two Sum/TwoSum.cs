@@ -1,6 +1,6 @@
 ﻿namespace Two_Sum
 {
-    internal class TwoSum
+    public class TwoSum
     {
         public static int[] Solve(int[] nums, int target)
         {

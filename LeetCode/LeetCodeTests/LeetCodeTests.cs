@@ -3,6 +3,7 @@
 using Longest_Palindromic_Substring;
 using Median_of_Two_Sorted_Arrays;
 using Reverse_Integer;
+using Two_Sum;
 
 namespace LeetCodeTests
 {
@@ -32,6 +33,15 @@ namespace LeetCodeTests
         {
             Assert.AreEqual(FindMedianSortedArrays.Solve([1, 3], [2]), 2);
             Assert.AreEqual(FindMedianSortedArrays.Solve([1, 2], [3, 4]), 2.5);
+
+        }
+
+        [TestMethod]
+        public void TestTwoSum()
+        {
+            CollectionAssert.AreEqual(TwoSum.Solve([2, 7, 11, 15], 9), new int[] { 0, 1 });
+            CollectionAssert.AreEqual(TwoSum.Solve([3, 2, 4], 6), new int[] { 1, 2 });
+            CollectionAssert.AreEqual(TwoSum.Solve([3, 3], 6), new int[] { 0, 1 });
 
         }
     }

@@ -1,6 +1,7 @@
 
 
 using Longest_Palindromic_Substring;
+using Longest_Substring_Without_Repeating_Characters;
 using Median_of_Two_Sorted_Arrays;
 using Reverse_Integer;
 using Two_Sum;
@@ -42,7 +43,14 @@ namespace LeetCodeTests
             CollectionAssert.AreEqual(TwoSum.Solve([2, 7, 11, 15], 9), new int[] { 0, 1 });
             CollectionAssert.AreEqual(TwoSum.Solve([3, 2, 4], 6), new int[] { 1, 2 });
             CollectionAssert.AreEqual(TwoSum.Solve([3, 3], 6), new int[] { 0, 1 });
+        }
 
+        [TestMethod]
+        public void TestLongestSubstringWithoutRepeatingCharacters()
+        {
+            Assert.AreEqual(LongestSubstringWithoutRepeatingCharacters.Solve("abcabcbb"), 3);
+            Assert.AreEqual(LongestSubstringWithoutRepeatingCharacters.Solve("bbbbb"), 1);
+            Assert.AreEqual(LongestSubstringWithoutRepeatingCharacters.Solve("pwwkew"), 3);
         }
     }
 }

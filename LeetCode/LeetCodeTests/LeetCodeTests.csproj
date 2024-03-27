@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Add Two Numbers\Add Two Numbers.csproj" />
     <ProjectReference Include="..\Longest Palindromic Substring\Longest Palindromic Substring.csproj" />
     <ProjectReference Include="..\Longest Substring Without Repeating Characters\Longest Substring Without Repeating Characters.csproj" />
     <ProjectReference Include="..\Median of Two Sorted Arrays\Median of Two Sorted Arrays.csproj" />

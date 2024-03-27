@@ -1,5 +1,6 @@
 
 
+using Add_Two_Numbers;
 using Longest_Palindromic_Substring;
 using Longest_Substring_Without_Repeating_Characters;
 using Median_of_Two_Sorted_Arrays;
@@ -51,6 +52,17 @@ namespace LeetCodeTests
             Assert.AreEqual(LongestSubstringWithoutRepeatingCharacters.Solve("abcabcbb"), 3);
             Assert.AreEqual(LongestSubstringWithoutRepeatingCharacters.Solve("bbbbb"), 1);
             Assert.AreEqual(LongestSubstringWithoutRepeatingCharacters.Solve("pwwkew"), 3);
+        }
+
+        [TestMethod]
+        public void TestAddTwoNumbers()
+        {
+            var list1 = new ListNode(2, new ListNode(4, new ListNode(3, null)));
+            var list2 = new ListNode(5, new ListNode(6, new ListNode(4, null)));
+
+            Assert.AreEqual(list1.ToString(), "243");
+            Assert.AreEqual(list2.ToString(), "564");
+            Assert.AreEqual(AddTwoNumbers.Solve(list1, list2).ToString(), "708");
         }
     }
 }

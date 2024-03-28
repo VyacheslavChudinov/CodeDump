@@ -10,16 +10,25 @@
             var currentL2Node = l2;
             var currentResultNode = resultList;
 
-            while (currentL1Node != null || currentL2Node != null || hasOverFlow)
+            while (currentL1Node is not null || currentL2Node is not null || hasOverFlow)
             {
                 var localSum = (currentL1Node?.val ?? 0) + (currentL2Node?.val ?? 0) + (hasOverFlow ? 1 : 0);
 
                 hasOverFlow = localSum > 9;
-                currentResultNode.val = hasOverFlow ? localSum % 10 : localSum;
 
-                if (currentL1Node?.next != null || currentL2Node?.next != null || hasOverFlow)
+                if (currentResultNode is not null)
                 {
-                    currentResultNode.next = new ListNode();
+                    currentResultNode.val = hasOverFlow ? localSum % 10 : localSum;
+                }
+
+
+                if (currentL1Node?.next is not null || currentL2Node?.next is not null || hasOverFlow)
+                {
+                    if (currentResultNode is not null)
+                    { 
+                        currentResultNode.next = new ListNode();
+                    }
+
                     currentResultNode = currentResultNode?.next;
                 }
 

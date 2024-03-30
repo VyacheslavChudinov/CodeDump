@@ -6,6 +6,7 @@ using Longest_Substring_Without_Repeating_Characters;
 using Median_of_Two_Sorted_Arrays;
 using Reverse_Integer;
 using Two_Sum;
+using Longest_Common_Prefix;
 
 namespace LeetCodeTests
 {
@@ -63,6 +64,15 @@ namespace LeetCodeTests
             Assert.AreEqual(list1.ToString(), "243");
             Assert.AreEqual(list2.ToString(), "564");
             Assert.AreEqual(AddTwoNumbers.Solve(list1, list2).ToString(), "708");
+        }
+
+        [TestMethod]
+        public void TestLongestCommonPrefix()
+        {
+
+            Assert.AreEqual(LongestCommonPrefix.Solve(["flower", "flow", "flight"]), "fl");
+            Assert.AreEqual(LongestCommonPrefix.Solve(["dog", "racecar", "car"]), "");
+            Assert.AreEqual(LongestCommonPrefix.Solve(["", "flow", "flight"]), "");
         }
     }
 }

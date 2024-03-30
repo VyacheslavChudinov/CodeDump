@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -23,6 +23,7 @@
     <ProjectReference Include="..\Add Two Numbers\Add Two Numbers.csproj" />
     <ProjectReference Include="..\Longest Palindromic Substring\Longest Palindromic Substring.csproj" />
     <ProjectReference Include="..\Longest Substring Without Repeating Characters\Longest Substring Without Repeating Characters.csproj" />
+    <ProjectReference Include="..\LongestCommonPrefix\Longest Common Prefix.csproj" />
     <ProjectReference Include="..\Median of Two Sorted Arrays\Median of Two Sorted Arrays.csproj" />
     <ProjectReference Include="..\Reverse Integer\Reverse Integer.csproj" />
     <ProjectReference Include="..\Two Sum\Two Sum.csproj" />

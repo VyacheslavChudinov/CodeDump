@@ -7,6 +7,7 @@ using Median_of_Two_Sorted_Arrays;
 using Reverse_Integer;
 using Two_Sum;
 using Longest_Common_Prefix;
+using Valid_Parentheses;
 
 namespace LeetCodeTests
 {
@@ -73,6 +74,16 @@ namespace LeetCodeTests
             Assert.AreEqual(LongestCommonPrefix.Solve(["flower", "flow", "flight"]), "fl");
             Assert.AreEqual(LongestCommonPrefix.Solve(["dog", "racecar", "car"]), "");
             Assert.AreEqual(LongestCommonPrefix.Solve(["", "flow", "flight"]), "");
+        }
+
+        [TestMethod]
+        public void TestValidParentheses()
+        {
+            Assert.AreEqual(ValidParentheses.Solve("()"), true);
+            Assert.AreEqual(ValidParentheses.Solve("()[]{}"), true);
+            Assert.AreEqual(ValidParentheses.Solve("(]"), false);
+            Assert.AreEqual(ValidParentheses.Solve("([)]"), false);
+            Assert.AreEqual(ValidParentheses.Solve("]"), false);
         }
     }
 }

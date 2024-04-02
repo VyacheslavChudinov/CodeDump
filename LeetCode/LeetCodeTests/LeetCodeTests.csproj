@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -27,6 +27,7 @@
     <ProjectReference Include="..\Median of Two Sorted Arrays\Median of Two Sorted Arrays.csproj" />
     <ProjectReference Include="..\Reverse Integer\Reverse Integer.csproj" />
     <ProjectReference Include="..\Two Sum\Two Sum.csproj" />
+    <ProjectReference Include="..\Valid Parentheses\Valid Parentheses.csproj" />
   </ItemGroup>
 
   <ItemGroup>

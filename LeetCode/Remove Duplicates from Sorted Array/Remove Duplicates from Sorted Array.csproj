@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Remove_Duplicates_from_Sorted_Array</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Task.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Task.txt" />
+  </ItemGroup>
+
+</Project>

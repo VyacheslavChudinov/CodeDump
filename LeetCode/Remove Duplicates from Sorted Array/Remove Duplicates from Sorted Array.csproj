@@ -7,12 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Task.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Task.txt" />
-  </ItemGroup>
-
 </Project>

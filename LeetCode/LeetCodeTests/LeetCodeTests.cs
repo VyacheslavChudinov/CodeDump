@@ -8,6 +8,7 @@ using Reverse_Integer;
 using Two_Sum;
 using Longest_Common_Prefix;
 using Valid_Parentheses;
+using Remove_Duplicates_from_Sorted_Array;
 
 namespace LeetCodeTests
 {
@@ -84,6 +85,13 @@ namespace LeetCodeTests
             Assert.AreEqual(ValidParentheses.Solve("(]"), false);
             Assert.AreEqual(ValidParentheses.Solve("([)]"), false);
             Assert.AreEqual(ValidParentheses.Solve("]"), false);
+        }
+
+        [TestMethod]
+        public void TestRemoveDuplicatesFromSortedArray()
+        {
+            Assert.AreEqual(RemoveDuplicatesFromSortedArray.Solve([1, 1, 2]), 2);
+            Assert.AreEqual(RemoveDuplicatesFromSortedArray.Solve([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]), 5);
         }
     }
 }

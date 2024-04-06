@@ -19,11 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCodeTests", "LeetCodeTe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reverse Integer", "Reverse Integer\Reverse Integer.csproj", "{32E08260-BF0B-4E6F-9A00-CE18BFDE4E7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remove Duplicates from Sorted Array", "Remove Duplicates from Sorted Array\Remove Duplicates from Sorted Array.csproj", "{78030017-DCD7-4998-8C90-1AE2FBF98BAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Remove Duplicates from Sorted Array", "Remove Duplicates from Sorted Array\Remove Duplicates from Sorted Array.csproj", "{78030017-DCD7-4998-8C90-1AE2FBF98BAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Longest Common Prefix", "LongestCommonPrefix\Longest Common Prefix.csproj", "{FEBDA301-93F8-457A-A868-47A53B077645}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Longest Common Prefix", "LongestCommonPrefix\Longest Common Prefix.csproj", "{FEBDA301-93F8-457A-A868-47A53B077645}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Valid Parentheses", "Valid Parentheses\Valid Parentheses.csproj", "{5FB26FA7-E533-42E2-BFBC-5205B5A78DDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Valid Parentheses", "Valid Parentheses\Valid Parentheses.csproj", "{5FB26FA7-E533-42E2-BFBC-5205B5A78DDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +85,7 @@ Global
 		{32E08260-BF0B-4E6F-9A00-CE18BFDE4E7F} = {68629B82-101B-4629-BA66-D02143E35FEC}
 		{78030017-DCD7-4998-8C90-1AE2FBF98BAE} = {68629B82-101B-4629-BA66-D02143E35FEC}
 		{FEBDA301-93F8-457A-A868-47A53B077645} = {68629B82-101B-4629-BA66-D02143E35FEC}
+		{5FB26FA7-E533-42E2-BFBC-5205B5A78DDF} = {68629B82-101B-4629-BA66-D02143E35FEC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {155DBAAA-346F-42F5-9587-DB3B22041D67}

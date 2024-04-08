@@ -1,4 +1,6 @@
-﻿namespace Merge_Two_Sorted_Lists
+﻿using System.Text;
+
+namespace Merge_Two_Sorted_Lists
 {
     public class ListNode
     {
@@ -8,6 +10,20 @@
         {
             this.val = val;
             this.next = next!;
+        }
+
+        public override string ToString()
+        {
+            var result = new StringBuilder(val.ToString());
+            var nextNode = next;
+
+            while (nextNode is not null)
+            {
+                result.Append(nextNode.val.ToString());
+                nextNode = nextNode.next;
+            }
+
+            return result.ToString();
         }
     }
 

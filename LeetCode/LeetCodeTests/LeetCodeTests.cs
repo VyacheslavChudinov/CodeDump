@@ -9,6 +9,7 @@ using Two_Sum;
 using Longest_Common_Prefix;
 using Valid_Parentheses;
 using Remove_Duplicates_from_Sorted_Array;
+using Merge_Two_Sorted_Lists;
 
 namespace LeetCodeTests
 {
@@ -60,8 +61,8 @@ namespace LeetCodeTests
         [TestMethod]
         public void TestAddTwoNumbers()
         {
-            var list1 = new ListNode(2, new ListNode(4, new ListNode(3, null)));
-            var list2 = new ListNode(5, new ListNode(6, new ListNode(4, null)));
+            var list1 = new Add_Two_Numbers.ListNode(2, new Add_Two_Numbers.ListNode(4, new Add_Two_Numbers.ListNode(3, null!)));
+            var list2 = new Add_Two_Numbers.ListNode(5, new Add_Two_Numbers.ListNode(6, new Add_Two_Numbers.ListNode(4, null!)));
 
             Assert.AreEqual(list1.ToString(), "243");
             Assert.AreEqual(list2.ToString(), "564");
@@ -92,6 +93,29 @@ namespace LeetCodeTests
         {
             Assert.AreEqual(RemoveDuplicatesFromSortedArray.Solve([1, 1, 2]), 2);
             Assert.AreEqual(RemoveDuplicatesFromSortedArray.Solve([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]), 5);
+        }
+
+        [TestMethod]
+        public void TestMergeTwoSortedLists()
+        {
+            var firstTestList1 =
+                new Merge_Two_Sorted_Lists.ListNode(1,
+                new Merge_Two_Sorted_Lists.ListNode(2,
+                new Merge_Two_Sorted_Lists.ListNode(4, null)));
+            var firstTestList2 =
+                new Merge_Two_Sorted_Lists.ListNode(1,
+                new Merge_Two_Sorted_Lists.ListNode(3,
+                new Merge_Two_Sorted_Lists.ListNode(4, null)));
+            var firstTestList3 =
+                new Merge_Two_Sorted_Lists.ListNode(1,
+                new Merge_Two_Sorted_Lists.ListNode(1,
+                new Merge_Two_Sorted_Lists.ListNode(2,
+                new Merge_Two_Sorted_Lists.ListNode(3,
+                new Merge_Two_Sorted_Lists.ListNode(4,
+                new Merge_Two_Sorted_Lists.ListNode(4, null))))));
+
+            Assert.AreEqual(MergeTwoSortedLists.Solve(firstTestList1, firstTestList2).ToString(), firstTestList3.ToString());
+            Assert.AreEqual(MergeTwoSortedLists.Solve(null!, null!), null);
         }
     }
 }

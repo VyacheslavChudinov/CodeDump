@@ -25,6 +25,7 @@
     <ProjectReference Include="..\Longest Substring Without Repeating Characters\Longest Substring Without Repeating Characters.csproj" />
     <ProjectReference Include="..\LongestCommonPrefix\Longest Common Prefix.csproj" />
     <ProjectReference Include="..\Median of Two Sorted Arrays\Median of Two Sorted Arrays.csproj" />
+    <ProjectReference Include="..\Merge Two Sorted Lists\Merge Two Sorted Lists.csproj" />
     <ProjectReference Include="..\Remove Duplicates from Sorted Array\Remove Duplicates from Sorted Array.csproj" />
     <ProjectReference Include="..\Reverse Integer\Reverse Integer.csproj" />
     <ProjectReference Include="..\Two Sum\Two Sum.csproj" />
